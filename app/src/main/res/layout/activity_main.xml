@@ -12,12 +12,14 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
     </android.support.design.widget.AppBarLayout>
@@ -28,11 +30,19 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <Button
-            android:id="@+id/btnOpenGoole"
+            android:id="@+id/btnOpenChrome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="@string/google" />
+            android:text="@string/chrome" />
+
+        <Button
+            android:id="@+id/btnOpenWebView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnOpenChrome"
+            android:layout_centerHorizontal="true"
+            android:text="@string/webview" />
 
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
